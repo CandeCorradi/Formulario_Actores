@@ -25,6 +25,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Views\ActorEFView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\EstudioEFView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\PeliculasADOView.cs">
       <SubType>Form</SubType>
     </Compile>

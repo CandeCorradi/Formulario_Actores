@@ -14,6 +14,8 @@ namespace WindowsForms.DataContext
         //Define DbSet for your entities here
         public virtual DbSet<Pelicula> Peliculas { get; set; }
         public virtual DbSet<Pais> Paises { get; set; }
+        public virtual DbSet<Actor> Actores { get; set; }
+        public virtual DbSet<Estudio> Estudios { get; set; }
         public CineContext()
         {
         }
@@ -31,7 +33,7 @@ namespace WindowsForms.DataContext
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Cargamos los datos iniciales de la base de datos       
+            #region Cargamos los datos iniciales de la base de datos       
             modelBuilder.Entity<Pais>().HasData(
                 new Pais { Id = 1, Nombre = "Argentina", Eliminado = false },
                 new Pais { Id = 2, Nombre = "Brasil", Eliminado = false },
@@ -43,9 +45,11 @@ namespace WindowsForms.DataContext
                 new Pais { Id = 8, Nombre = "México", Eliminado = false },
                 new Pais { Id = 9, Nombre = "Reino Unido", Eliminado = false },
                 new Pais { Id = 10, Nombre = "Japón", Eliminado = false }
-            );
+                );
+            #endregion
 
-            // Datos semilla para Peliculas
+            #region Datos semilla para Peliculas
+
             modelBuilder.Entity<Pelicula>().HasData(
                 new Pelicula
             {
@@ -146,12 +150,91 @@ namespace WindowsForms.DataContext
                     calificacion = 8.5,
                     Eliminado = false,
                     PaisId = 7
-                }
+                }    
             );
+            #endregion
+
+            #region Datos semilla para Estudios de cine
+            modelBuilder.Entity<Estudio>().HasData(
+                new Estudio
+                {
+                    Id = 1,
+                    Nombre = "Warner Bros.",
+                    Eliminado = false
+                },
+                new Estudio
+                {
+                    Id = 2,
+                    Nombre = "Universal Pictures",
+                    Eliminado = false
+                },
+                new Estudio
+                {
+                    Id = 3,
+                    Nombre = "Paramount Pictures",
+                    Eliminado = false
+                },
+                new Estudio
+                {
+                    Id = 4,
+                    Nombre = "20th Century Fox",
+                    Eliminado = false
+                },
+                new Estudio
+                {
+                    Id = 5,
+                    Nombre = "Columbia Pictures",
+                    Eliminado = false
+                }
+                );
+            #endregion
+
+            #region Datos semilla para Actores
+            modelBuilder.Entity<Actor>().HasData(
+                new Actor
+                {
+                    Id = 1,
+                    Nombre = "Leonardo DiCaprio",
+                    PaisId = 3,
+                    Eliminado = false
+                },
+                new Actor
+                {
+                    Id = 2,
+                    Nombre = "Meryl Streep",
+                    PaisId = 3,
+                    Eliminado = false
+                },
+                new Actor
+                {
+                    Id = 3,
+                    Nombre = "Robert De Niro",
+                    PaisId = 3,
+                    Eliminado = false
+                },
+                new Actor
+                {
+                    Id = 4,
+                    Nombre = "Scarlett Johansson",
+                    PaisId = 3,
+                    Eliminado = false
+                },
+                new Actor
+                {
+                    Id = 5,
+                    Nombre = "Ricardo Darín",
+                    PaisId = 1,
+                    Eliminado = false
+                }
+                );
+            #endregion
+
 
             //configuramos las query para que no devuelva los eliminados
             modelBuilder.Entity<Pelicula>().HasQueryFilter(p => !p.Eliminado);
             modelBuilder.Entity<Pais>().HasQueryFilter(p => !p.Eliminado);
+            modelBuilder.Entity<Actor>().HasQueryFilter(a => !a.Eliminado);
+            modelBuilder.Entity<Estudio>().HasQueryFilter(e => !e.Eliminado);
         }
     }
 }

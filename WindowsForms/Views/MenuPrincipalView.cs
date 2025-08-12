@@ -50,16 +50,15 @@ namespace WindowsForms
             paisesEFView.ShowDialog();
         }
 
-        private void SubMenuActores_Click(object sender, EventArgs e)
-        {
-            var actoresView = new Actores();
-            actoresView.ShowDialog();
-        }
+        
 
-        private void SubMenuCine_Click(object sender, EventArgs e)
+        
+
+        private void SubMenuEstudiosDeCine_Click(object sender, EventArgs e)
         {
-            var cineView = new Cine();
-            cineView.ShowDialog();
+            var estudioEFView = new EstudioEFView();
+            estudioEFView.ShowDialog();
+
         }
     }
 }
