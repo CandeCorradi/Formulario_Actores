@@ -58,7 +58,7 @@
             // BtnGoOut
             // 
             BtnGoOut.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnGoOut.Location = new Point(206, 399);
+            BtnGoOut.Location = new Point(305, 399);
             BtnGoOut.Name = "BtnGoOut";
             BtnGoOut.Size = new Size(75, 23);
             BtnGoOut.TabIndex = 17;
@@ -68,12 +68,13 @@
             // 
             // GridActor
             // 
+            GridActor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             GridActor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             GridActor.Columns.AddRange(new DataGridViewColumn[] { Nombre, Pais });
             GridActor.Location = new Point(38, 269);
             GridActor.Name = "GridActor";
             GridActor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            GridActor.Size = new Size(243, 124);
+            GridActor.Size = new Size(342, 124);
             GridActor.TabIndex = 16;
             // 
             // Nombre
@@ -104,7 +105,7 @@
             BtnAdd.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BtnAdd.Location = new Point(38, 201);
             BtnAdd.Name = "BtnAdd";
-            BtnAdd.Size = new Size(243, 23);
+            BtnAdd.Size = new Size(342, 23);
             BtnAdd.TabIndex = 14;
             BtnAdd.Text = "Agregar Actor";
             BtnAdd.UseVisualStyleBackColor = true;
@@ -115,7 +116,7 @@
             CmbPaisActor.FormattingEnabled = true;
             CmbPaisActor.Location = new Point(38, 166);
             CmbPaisActor.Name = "CmbPaisActor";
-            CmbPaisActor.Size = new Size(243, 23);
+            CmbPaisActor.Size = new Size(342, 23);
             CmbPaisActor.TabIndex = 13;
             // 
             // label3
@@ -133,7 +134,7 @@
             // 
             TxtNameActor.Location = new Point(38, 100);
             TxtNameActor.Name = "TxtNameActor";
-            TxtNameActor.Size = new Size(243, 23);
+            TxtNameActor.Size = new Size(342, 23);
             TxtNameActor.TabIndex = 11;
             // 
             // label2
@@ -152,7 +153,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Muthiara -Demo Version-", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(110, 19);
+            label1.Location = new Point(149, 19);
             label1.Name = "label1";
             label1.Size = new Size(111, 43);
             label1.TabIndex = 9;
@@ -162,7 +163,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(315, 444);
+            ClientSize = new Size(411, 444);
             Controls.Add(BtnGoOut);
             Controls.Add(GridActor);
             Controls.Add(label4);

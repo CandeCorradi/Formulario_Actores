@@ -34,7 +34,7 @@
             GridStudy = new DataGridView();
             label3 = new Label();
             BtnAdd = new Button();
-            TxtStudioName = new TextBox();
+            TxtEstudio = new TextBox();
             label2 = new Label();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -60,9 +60,11 @@
             BtnGoOut.TabIndex = 14;
             BtnGoOut.Text = "Salir";
             BtnGoOut.UseVisualStyleBackColor = true;
+            BtnGoOut.Click += BtnGoOut_Click;
             // 
             // GridStudy
             // 
+            GridStudy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             GridStudy.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             GridStudy.Location = new Point(16, 186);
             GridStudy.Name = "GridStudy";
@@ -88,13 +90,14 @@
             BtnAdd.TabIndex = 11;
             BtnAdd.Text = "Agregar Estudio";
             BtnAdd.UseVisualStyleBackColor = true;
+            BtnAdd.Click += BtnAdd_Click;
             // 
-            // TxtStudioName
+            // TxtEstudio
             // 
-            TxtStudioName.Location = new Point(16, 92);
-            TxtStudioName.Name = "TxtStudioName";
-            TxtStudioName.Size = new Size(324, 23);
-            TxtStudioName.TabIndex = 10;
+            TxtEstudio.Location = new Point(16, 92);
+            TxtEstudio.Name = "TxtEstudio";
+            TxtEstudio.Size = new Size(324, 23);
+            TxtEstudio.TabIndex = 10;
             // 
             // label2
             // 
@@ -126,7 +129,7 @@
             Controls.Add(GridStudy);
             Controls.Add(label3);
             Controls.Add(BtnAdd);
-            Controls.Add(TxtStudioName);
+            Controls.Add(TxtEstudio);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -146,7 +149,7 @@
         private DataGridView GridStudy;
         private Label label3;
         private Button BtnAdd;
-        private TextBox TxtStudioName;
+        private TextBox TxtEstudio;
         private Label label2;
         private Label label1;
     }

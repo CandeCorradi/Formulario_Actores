@@ -34,6 +34,7 @@
             iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
             SubmenuFormularioFuentes = new FontAwesome.Sharp.IconMenuItem();
             SubMenuActores = new ToolStripMenuItem();
+            SubMenuCine = new ToolStripMenuItem();
             iconMenuItem4 = new FontAwesome.Sharp.IconMenuItem();
             SubmenuFormPeliculasApi = new FontAwesome.Sharp.IconMenuItem();
             SubmenuFormPeliculasADO = new FontAwesome.Sharp.IconMenuItem();
@@ -43,7 +44,6 @@
             SubmenuSalirDelSistema = new FontAwesome.Sharp.IconMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             SubmenuAcercaDe = new FontAwesome.Sharp.IconMenuItem();
-            SubMenuPaises = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -80,7 +80,7 @@
             // 
             // iconMenuItem3
             // 
-            iconMenuItem3.DropDownItems.AddRange(new ToolStripItem[] { SubmenuFormularioFuentes, SubMenuActores, SubMenuPaises });
+            iconMenuItem3.DropDownItems.AddRange(new ToolStripItem[] { SubmenuFormularioFuentes, SubMenuActores, SubMenuCine });
             iconMenuItem3.IconChar = FontAwesome.Sharp.IconChar.None;
             iconMenuItem3.IconColor = Color.Black;
             iconMenuItem3.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -104,6 +104,13 @@
             SubMenuActores.Size = new Size(188, 30);
             SubMenuActores.Text = "Formulario Actores";
             SubMenuActores.Click += SubMenuActores_Click;
+            // 
+            // SubMenuCine
+            // 
+            SubMenuCine.Name = "SubMenuCine";
+            SubMenuCine.Size = new Size(188, 30);
+            SubMenuCine.Text = "Formulario Cine";
+            SubMenuCine.Click += SubMenuCine_Click;
             // 
             // iconMenuItem4
             // 
@@ -186,13 +193,6 @@
             SubmenuAcercaDe.Size = new Size(158, 22);
             SubmenuAcercaDe.Text = "Acerca de...";
             // 
-            // SubMenuPaises
-            // 
-            SubMenuPaises.Name = "SubMenuPaises";
-            SubMenuPaises.Size = new Size(188, 30);
-            SubMenuPaises.Text = "Formulario Paises";
-//            SubMenuPaises.Click += SubMenuPaises_Click;
-            // 
             // MenuPrincipalView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -226,6 +226,6 @@
         private ToolStripMenuItem subMenuPeliculaEF;
         private FontAwesome.Sharp.IconMenuItem SubMenuPaisesEF;
         private ToolStripMenuItem SubMenuActores;
-        private ToolStripMenuItem SubMenuPaises;
+        private ToolStripMenuItem SubMenuCine;
     }
 }

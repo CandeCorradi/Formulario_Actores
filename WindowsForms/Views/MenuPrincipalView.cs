@@ -56,10 +56,10 @@ namespace WindowsForms
             actoresView.ShowDialog();
         }
 
-       // private void SubMenuPaises_Click(object sender, EventArgs e)
-       // {
-            //var paisesView = new PaisesView();
-            //paisesView.ShowDialog();
-       // }
+        private void SubMenuCine_Click(object sender, EventArgs e)
+        {
+            var cineView = new Cine();
+            cineView.ShowDialog();
+        }
     }
 }
