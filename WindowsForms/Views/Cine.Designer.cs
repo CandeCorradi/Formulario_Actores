@@ -29,102 +29,117 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cine));
-            pictureBox1 = new PictureBox();
+            label1 = new Label();
+            BtnDelete = new Button();
+            BtnModificar = new Button();
             BtnGoOut = new Button();
             GridStudy = new DataGridView();
             label3 = new Label();
             BtnAdd = new Button();
             TxtEstudio = new TextBox();
             label2 = new Label();
-            label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)GridStudy).BeginInit();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources._212c3d35_d132_4246_96cf_ab0135fc25fc;
-            pictureBox1.Location = new Point(1, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(359, 450);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // BtnGoOut
-            // 
-            BtnGoOut.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnGoOut.Location = new Point(265, 403);
-            BtnGoOut.Name = "BtnGoOut";
-            BtnGoOut.Size = new Size(75, 23);
-            BtnGoOut.TabIndex = 14;
-            BtnGoOut.Text = "Salir";
-            BtnGoOut.UseVisualStyleBackColor = true;
-            BtnGoOut.Click += BtnGoOut_Click;
-            // 
-            // GridStudy
-            // 
-            GridStudy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            GridStudy.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            GridStudy.Location = new Point(16, 186);
-            GridStudy.Name = "GridStudy";
-            GridStudy.Size = new Size(324, 211);
-            GridStudy.TabIndex = 13;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(16, 162);
-            label3.Name = "label3";
-            label3.Size = new Size(140, 21);
-            label3.TabIndex = 12;
-            label3.Text = "Lista de estudios:";
-            // 
-            // BtnAdd
-            // 
-            BtnAdd.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnAdd.Location = new Point(16, 121);
-            BtnAdd.Name = "BtnAdd";
-            BtnAdd.Size = new Size(324, 23);
-            BtnAdd.TabIndex = 11;
-            BtnAdd.Text = "Agregar Estudio";
-            BtnAdd.UseVisualStyleBackColor = true;
-            BtnAdd.Click += BtnAdd_Click;
-            // 
-            // TxtEstudio
-            // 
-            TxtEstudio.Location = new Point(16, 92);
-            TxtEstudio.Name = "TxtEstudio";
-            TxtEstudio.Size = new Size(324, 23);
-            TxtEstudio.TabIndex = 10;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(16, 68);
-            label2.Name = "label2";
-            label2.Size = new Size(166, 21);
-            label2.TabIndex = 9;
-            label2.Text = "Nombre del estudio:";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(93, 24);
+            label1.Location = new Point(104, 18);
             label1.Name = "label1";
-            label1.Size = new Size(179, 28);
-            label1.TabIndex = 8;
+            label1.Size = new Size(224, 34);
+            label1.TabIndex = 16;
             label1.Text = "Estudios de Cine";
+            // 
+            // BtnDelete
+            // 
+            BtnDelete.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnDelete.Location = new Point(228, 192);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(161, 29);
+            BtnDelete.TabIndex = 31;
+            BtnDelete.Text = "Eliminar";
+            BtnDelete.UseVisualStyleBackColor = true;
+            // 
+            // BtnModificar
+            // 
+            BtnModificar.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnModificar.Location = new Point(19, 192);
+            BtnModificar.Name = "BtnModificar";
+            BtnModificar.Size = new Size(161, 29);
+            BtnModificar.TabIndex = 30;
+            BtnModificar.Text = "Modificar";
+            BtnModificar.UseVisualStyleBackColor = true;
+            // 
+            // BtnGoOut
+            // 
+            BtnGoOut.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnGoOut.Location = new Point(131, 556);
+            BtnGoOut.Margin = new Padding(3, 4, 3, 4);
+            BtnGoOut.Name = "BtnGoOut";
+            BtnGoOut.Size = new Size(161, 31);
+            BtnGoOut.TabIndex = 29;
+            BtnGoOut.Text = "Salir";
+            BtnGoOut.UseVisualStyleBackColor = true;
+            // 
+            // GridStudy
+            // 
+            GridStudy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            GridStudy.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            GridStudy.Location = new Point(19, 267);
+            GridStudy.Margin = new Padding(3, 4, 3, 4);
+            GridStudy.Name = "GridStudy";
+            GridStudy.RowHeadersWidth = 51;
+            GridStudy.Size = new Size(370, 281);
+            GridStudy.TabIndex = 28;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(19, 240);
+            label3.Name = "label3";
+            label3.Size = new Size(173, 23);
+            label3.TabIndex = 27;
+            label3.Text = "Lista de estudios:";
+            // 
+            // BtnAdd
+            // 
+            BtnAdd.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnAdd.Location = new Point(19, 147);
+            BtnAdd.Margin = new Padding(3, 4, 3, 4);
+            BtnAdd.Name = "BtnAdd";
+            BtnAdd.Size = new Size(370, 31);
+            BtnAdd.TabIndex = 26;
+            BtnAdd.Text = "Agregar Estudio";
+            BtnAdd.UseVisualStyleBackColor = true;
+            // 
+            // TxtEstudio
+            // 
+            TxtEstudio.Location = new Point(19, 107);
+            TxtEstudio.Margin = new Padding(3, 4, 3, 4);
+            TxtEstudio.Name = "TxtEstudio";
+            TxtEstudio.Size = new Size(370, 27);
+            TxtEstudio.TabIndex = 25;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(19, 77);
+            label2.Name = "label2";
+            label2.Size = new Size(209, 23);
+            label2.TabIndex = 24;
+            label2.Text = "Nombre del estudio:";
             // 
             // Cine
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Menu;
-            ClientSize = new Size(357, 450);
+            ClientSize = new Size(408, 600);
+            Controls.Add(BtnDelete);
+            Controls.Add(BtnModificar);
             Controls.Add(BtnGoOut);
             Controls.Add(GridStudy);
             Controls.Add(label3);
@@ -132,25 +147,24 @@
             Controls.Add(TxtEstudio);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Cine";
             Text = "Cine";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)GridStudy).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
+        private Label label1;
+        private Button BtnDelete;
+        private Button BtnModificar;
         private Button BtnGoOut;
         private DataGridView GridStudy;
         private Label label3;
         private Button BtnAdd;
         private TextBox TxtEstudio;
         private Label label2;
-        private Label label1;
     }
 }

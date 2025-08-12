@@ -17,6 +17,19 @@ namespace WindowsForms.Views
         public Actores()
         {
             InitializeComponent();
+            BtnAdd.Click += BtnAdd_Click;
+            BtnModificar.Click += BtnModificar_Click;
+            BtnGoOut.Click += BtnGoOut_Click;
+
+            if (GridActor.Columns.Count == 0)
+            {
+                // Agregamos las columnas si no existen
+                GridActor.Columns.Add("Nombre", "Nombre del Actor");
+                GridActor.Columns.Add("Pais", "País de Origen");
+                this.GridActor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+                    this.Nombre,
+                    this.Pais});
+            }
 
             //Lista de paises
             var paises = new List<string>
@@ -63,6 +76,40 @@ namespace WindowsForms.Views
         {
             this.Close();
         }
-       
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            if (GridActor.RowCount > 0 && GridActor.SelectedRows.Count > 0)
+            {
+                var selectedRow = GridActor.SelectedRows[0];
+
+                if (!string.IsNullOrEmpty(TxtNameActor.Text) && CmbPaisActor.SelectedItem != null)
+                {
+                    // Usar el nombre de la columna
+                    selectedRow.Cells["Nombre"].Value = TxtNameActor.Text;
+                    selectedRow.Cells["Pais"].Value = CmbPaisActor.SelectedItem.ToString();
+
+                    TxtNameActor.Clear();
+                    CmbPaisActor.SelectedIndex = -1;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese el nombre y seleccione un país.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (GridActor.RowCount > 0 && GridActor.SelectedRows.Count > 0)
+            {
+                // Eliminar la fila seleccionada
+                GridActor.Rows.RemoveAt(GridActor.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una fila para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
