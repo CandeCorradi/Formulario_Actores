@@ -10,7 +10,7 @@ namespace WindowsForms.Services
 {
     public class GenericService<T> : IGenericService<T> where T : class
     {
-        public async Task<T?> AddAsync(T? entity)
+        public async Task<bool> AddAsync(T? entity)
         {
             using (CineContext cine = new CineContext())
             {
